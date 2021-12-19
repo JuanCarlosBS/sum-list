@@ -1,9 +1,9 @@
 defmodule SumList do
-  def sum([], acc) do
-    acc
-  end
+  def call(list), do: sum(list, 0)
 
-  def sum([head | tail], acc) do
+  defp sum([], acc), do: acc
+
+  defp sum([head | tail], acc) do
     acc = acc + head
     sum(tail, acc)
   end
